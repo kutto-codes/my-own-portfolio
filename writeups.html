@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Write-ups | Koech Kutto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">/KOECH/-KUTTO-/</a>
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="writeups.html" class="active">Write-ups</a>
+        <a href="tools.html">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="page-hero">
+        <div class="eyebrow">WRITE-UPS</div>
+        <h1>Documenting what I test, how I test it, and why it matters</h1>
+        <p class="hero-role">I try to write in a format that is useful to both technical readers and non-security stakeholders. My goal is clear, reproducible reporting backed by evidence.</p>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Selected write-ups</h2>
+        </div>
+        <div class="grid-3">
+          <article class="writeup">
+            <div class="eyebrow">WA-001</div>
+            <h3>SQL injection to authentication bypass</h3>
+            <div class="meta-row">
+              <span class="tag">SQLi</span>
+              <span class="tag">Lab</span>
+              <span class="tag">Burp</span>
+            </div>
+            <p>In this lab write-up, I explain how I traced the issue, verified its impact on authentication, and considered the access-control risk.</p>
+            <span class="severity high">HIGH</span>
+          </article>
+
+          <article class="writeup">
+            <div class="eyebrow">WA-002</div>
+            <h3>IDOR in a restricted endpoint</h3>
+            <div class="meta-row">
+              <span class="tag">IDOR</span>
+              <span class="tag">API</span>
+              <span class="tag">Manual</span>
+            </div>
+            <p>I document how I checked object-level authorization, what the lab exposed, and how I verified the issue without accessing unnecessary data.</p>
+            <span class="severity med">MEDIUM</span>
+          </article>
+
+          <article class="writeup">
+            <div class="eyebrow">WA-003</div>
+            <h3>Reflected XSS from a user-controlled input</h3>
+            <div class="meta-row">
+              <span class="tag">XSS</span>
+              <span class="tag">DOM</span>
+              <span class="tag">Manual</span>
+            </div>
+            <p>I describe how I validated the reflected input in the lab, observed the browser behavior, and identified safer output handling as a remediation.</p>
+            <span class="severity info">INFO</span>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2>Skills I am building</h2>
+        </div>
+        <p class="hero-role">I am developing practical skills in web application security through focused study, hands-on labs, and careful documentation. These are areas I am actively learning and practicing.</p>
+        <div class="grid-3">
+          <article class="card">
+            <div class="eyebrow">01 / FOUNDATIONS</div>
+            <h3>Linux and networking</h3>
+            <p>I am strengthening my understanding of Linux, networking, and system behavior so I can better trace how web applications and their services work together.</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">02 / WEB</div>
+            <h3>Application fundamentals</h3>
+            <p>I study how inputs move through an application and how frontend behavior, backend logic, and access controls affect security.</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">03 / TESTING</div>
+            <h3>Manual web testing</h3>
+            <p>I practice focused manual testing in authorized labs, checking expected behavior and validating observations before treating them as findings.</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">04 / VULNERABILITIES</div>
+            <h3>Common web risks</h3>
+            <p>I am learning to recognize and safely validate issues such as injection, cross-site scripting, and broken access control using deliberately vulnerable practice applications.</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">05 / TOOLS</div>
+            <h3>Security tooling</h3>
+            <p>I use tools such as Burp Suite, Nmap, and Wireshark in practice environments to support web testing, network discovery, and traffic analysis.</p>
+          </article>
+          <article class="card">
+            <div class="eyebrow">06 / REPORTING</div>
+            <h3>Evidence and communication</h3>
+            <p>I focus on clear evidence, reproducible steps, and concise reporting so that technical observations can be understood and acted on.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2>How I approach security</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Curiosity with evidence</h3>
+            <p>I like to understand how an application works before testing it. I follow evidence, question assumptions, and connect a technical observation to its practical impact.</p>
+          </div>
+          <div class="card">
+            <h3>Responsible practice</h3>
+            <p>I keep my testing within an authorized scope, use practice labs, minimize data collection, and document findings in a way that supports remediation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2>Method I follow</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <ul class="simple-list">
+              <li>I map the application and identify relevant inputs.</li>
+              <li>I understand expected behavior before testing a possible weakness.</li>
+              <li>I validate observations with clear, appropriate evidence.</li>
+              <li>I document impact, risk, and reproduction steps.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <ul class="simple-list">
+              <li>I keep notes organized so I can review my work.</li>
+              <li>I check whether a proposed fix addresses the issue.</li>
+              <li>I prefer reproducible manual testing over blind scanning.</li>
+              <li>I aim to explain results clearly to technical and non-technical readers.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    Built with intent, not a template. Last updated: September 2026.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

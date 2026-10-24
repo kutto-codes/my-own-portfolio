@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Koech Kutto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">/KOECH/-KUTTO-/</a>
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="writeups.html">Write-ups</a>
+        <a href="tools.html">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="page-hero">
+        <div class="eyebrow">PROJECTS</div>
+        <h1>Hands-on work that strengthens my security skills.</h1>
+        <p class="hero-role">I focus on small, realistic projects that mirror real security workflows: tool setup, vulnerability practice, reporting, and automation.</p>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Selected projects</h2>
+        </div>
+        <div class="grid-3">
+          <article class="project-card">
+            <div class="eyebrow">Security tools setup</div>
+            <h3>Linux pentest lab environment</h3>
+            <div class="meta-row">
+              <span class="tag">Linux</span>
+              <span class="tag">Burp</span>
+              <span class="tag">Python</span>
+            </div>
+            <p>I use a custom environment to practice recon, web testing, and issue validation with a clean OS setup, proxy workflow, and repeatable scripts.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="eyebrow">Automation</div>
+            <h3>Recon helper script</h3>
+            <div class="meta-row">
+              <span class="tag">Python</span>
+              <span class="tag">HTTP</span>
+              <span class="tag">Nmap</span>
+            </div>
+            <p>I am developing a small Python utility to collect target metadata, check common endpoints, and prepare a structured recon checklist before deeper testing.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="eyebrow">Application testing</div>
+            <h3>Web vuln lab practice</h3>
+            <div class="meta-row">
+              <span class="tag">OWASP</span>
+              <span class="tag">SQLi</span>
+              <span class="tag">XSS</span>
+            </div>
+            <p>I practice manual testing against deliberately vulnerable applications, documenting the vulnerability path, reproduction steps, and impact.</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2>What I am learning now</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Core areas</h3>
+            <ul class="simple-list">
+              <li>I am learning about injection flaws and bypass methods.</li>
+              <li>I am studying broken access control and IDOR logic.</li>
+              <li>I am exploring authentication and session weaknesses.</li>
+              <li>I am learning to identify input validation and secure coding gaps.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Practice habits</h3>
+            <ul class="simple-list">
+              <li>I verify manually before relying on automation.</li>
+              <li>I collect clear evidence and write reproduction notes.</li>
+              <li>I follow documentation standards for responsible disclosure.</li>
+              <li>I review patch logic and security fixes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    Built with intent, not a template. Last updated: September 2026.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

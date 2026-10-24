@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Tools | Koech Kutto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">/KOECH/-KUTTO-/</a>
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="writeups.html">Write-ups</a>
+        <a href="tools.html" class="active">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="page-hero">
+        <div class="eyebrow">SECURITY TOOLS</div>
+        <h1>A visual guide to tools I use in authorized labs.</h1>
+        <p class="hero-role">I use these tools in practice environments to explore questions such as what services are available and how a web application handles traffic. The screenshots are examples from lab work. I only test systems I own or have permission to assess.</p>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">00</span>
+          <h2>How I use these tools</h2>
+        </div>
+        <div class="card project-card">
+          <p>I use each tool to explore a specific question in an authorized practice lab. The screenshots show examples of the interfaces and output I have encountered; results vary by setup, and a result by itself does not prove a vulnerability.</p>
+          <ul class="simple-list">
+            <li>I confirm permission and the exact systems and activities in scope before testing.</li>
+            <li>I use a training lab or a system I own and keep checks limited to the agreed purpose.</li>
+            <li>I review what a tool reports, verify observations safely, and record only necessary evidence.</li>
+            <li>I protect captured traffic and other data, then share findings with the system owner.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Network discovery</h2>
+        </div>
+        <div class="tool-list">
+          <article class="card project-card tool-card">
+            <div class="tool-copy">
+              <div class="eyebrow">HOST AND SERVICE MAPPING</div>
+              <h3>Nmap</h3>
+              <p>I use Nmap in authorized labs to identify reachable hosts and the network services they appear to expose. This helps me build an inventory and decide what to review.</p>
+              <p>The screenshots show terminal output summarizing ports and service information. I treat scan results as a starting point and interpret them in context rather than assuming they indicate a weakness.</p>
+              <p><strong>How I use it in a lab:</strong> I choose an in-scope practice host, select a scan appropriate to the exercise, and review the reported hosts, ports, and services. I check unexpected results against the lab documentation.</p>
+            </div>
+            <div class="tool-gallery">
+              <figure class="tool-figure">
+                <img src="nmap1.png" alt="Nmap output from a scan of the Scanme practice host, showing open and filtered ports" loading="lazy" decoding="async">
+                <figcaption>Example service scan of a designated practice host.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="nmap5.png" alt="Nmap terminal output listing detected network services and ports" loading="lazy" decoding="async">
+                <figcaption>Another example of summarized port and service results.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card project-card tool-card">
+            <div class="tool-copy">
+              <div class="eyebrow">WEB CONTENT DISCOVERY</div>
+              <h3>Gobuster</h3>
+              <p>I use Gobuster in authorized labs to check a web server for common paths and review the responses. This can help me find pages or directories that may need further review.</p>
+              <p>I interpret responses such as redirects and access-denied results carefully; a discovered path is not automatically a vulnerability.</p>
+              <p><strong>How I use it in a lab:</strong> I point it only at the approved practice web app, select a wordlist suitable for the exercise, and review the returned paths and response codes. I check relevant results in the lab app and report only verified, in-scope observations.</p>
+            </div>
+            <div class="tool-gallery">
+              <figure class="tool-figure">
+                <img src="gobuster1.png" alt="Gobuster results from a web directory discovery practice lab" loading="lazy" decoding="async">
+                <figcaption>Example results showing discovered paths and HTTP response codes.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="gobuster2.png" alt="Gobuster output from a local web application practice environment" loading="lazy" decoding="async">
+                <figcaption>A local lab example with a discovered route and redirect.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="gobuster_dir_files.png" alt="Gobuster output showing discovered pages and directories in a lab" loading="lazy" decoding="async">
+                <figcaption>Further example output from a deliberately scoped practice target.</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2>Web application testing</h2>
+        </div>
+        <div class="tool-list">
+          <article class="card project-card tool-card">
+            <div class="tool-copy">
+              <div class="eyebrow">HTTP INSPECTION</div>
+              <h3>Burp Suite</h3>
+              <p>I use Burp Suite as a web testing proxy to inspect requests and responses between a browser and an application, map the pages I visit, and investigate application behavior.</p>
+              <p>I use these views to organize an assessment and understand the application. I stay within the agreed scope and verify findings without accessing data I do not need.</p>
+              <p><strong>How I use it in a lab:</strong> I configure a browser to use Burp's local proxy, visit the practice app, and review requests and responses in the history and site map. I begin with observation and change or replay requests only when the exercise permits it.</p>
+            </div>
+            <div class="tool-gallery">
+              <figure class="tool-figure">
+                <img src="burpsuite.jpg" alt="Burp Suite target site map and a web request in a security testing lab" loading="lazy" decoding="async">
+                <figcaption>Application map and request details from a practice site.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="burpsuite1.png" alt="Burp Suite interface captured during a web application practice session" loading="lazy" decoding="async">
+                <figcaption>Another view of Burp Suite during a lab session.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="burpsuite2.png" alt="Burp Suite site map showing pages and observations for a web lab" loading="lazy" decoding="async">
+                <figcaption>A site map can help testers understand application structure.</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="card project-card tool-card">
+            <div class="tool-copy">
+              <div class="eyebrow">PACKET ANALYSIS</div>
+              <h3>Wireshark</h3>
+              <p>I use Wireshark to inspect network packets and examine communication between systems. Display filters help me narrow a capture to traffic relevant to a troubleshooting or defensive investigation question.</p>
+              <p>Because packet captures can contain sensitive information, I capture only where authorized, minimize collection, and protect or remove data when I no longer need it.</p>
+              <p><strong>How I use it in a lab:</strong> I open a provided practice capture or select an authorized interface, then use display filters to focus on the relevant protocol or conversation. I inspect packet layers and avoid sharing captures that contain private data.</p>
+            </div>
+            <div class="tool-gallery">
+              <figure class="tool-figure">
+                <img src="wireshark.png" alt="Wireshark coloring-rules window with example packet display filters" loading="lazy" decoding="async">
+                <figcaption>Example display and coloring rules for organizing packet views.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="wireshark1.png" alt="Wireshark and terminal views used to inspect authorized lab traffic" loading="lazy" decoding="async">
+                <figcaption>A lab-oriented overview of packet analysis in Wireshark.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="wireshark2.jpeg" alt="Wireshark capture with a DNS and HTTP display filter applied" loading="lazy" decoding="async">
+                <figcaption>A filtered capture showing packet details for analysis.</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2>Framework overview</h2>
+        </div>
+        <div class="tool-list">
+          <article class="card project-card tool-card">
+            <div class="tool-copy">
+              <div class="eyebrow">TESTING FRAMEWORK</div>
+              <h3>Metasploit Framework</h3>
+              <p>I use Metasploit in controlled environments to learn how security tests are organized and validated. Its modules support different assessment tasks, and its console provides an interface for managing them.</p>
+              <p>The screenshots show the framework starting up; they do not show a system being tested or compromised. I keep its use to a lab or an explicitly authorized assessment.</p>
+              <p><strong>How I use it in a lab:</strong> I work only with an intentionally vulnerable training target. I read the module documentation, check it against the exercise, and follow the lab instructions; I do not run modules against public or third-party systems.</p>
+            </div>
+            <div class="tool-gallery">
+              <figure class="tool-figure">
+                <img src="metasploit_console.jpg" alt="Metasploit Framework console showing its startup banner in a lab environment" loading="lazy" decoding="async">
+                <figcaption>Framework console at startup.</figcaption>
+              </figure>
+              <figure class="tool-figure">
+                <img src="metasploit_version.jpg" alt="Terminal showing Metasploit Framework version information" loading="lazy" decoding="async">
+                <figcaption>Version and module information in a terminal.</figcaption>
+              </figure>
+            </div>
+          </article>
+          <aside class="card project-card">
+            <div class="eyebrow">RESPONSIBLE PRACTICE</div>
+            <h3>Scope first, evidence second</h3>
+            <p>Before I use a security tool, I confirm written permission, the systems and activities in scope, and the rules for handling data. I choose the least intrusive checks that answer my question, record relevant evidence, and report results to the system owner.</p>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    Built with intent, not a template. Last updated: October 2026.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

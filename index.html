@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koech Kutto | Web Security Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <nav class="primary-nav" id="primaryNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="writeups.html">Write-ups</a>
+        <a href="tools.html">Tools</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="page-hero">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <div class="hero-meta">
+              <span>FOCUS: Web application security</span>
+              <span class="dot">·</span>
+              <span>BASED IN: <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=Eldoret%2C+Kenya" target="_blank" rel="noreferrer">Eldoret, Kenya</a></span>
+              <span class="dot">·</span>
+              <span>STATUS: Open to opportunities</span>
+            </div>
+            <h1>Koech Kutto</h1>
+            <p class="hero-role">I am an aspiring web application penetration tester with a strong interest in secure software, ethical hacking, and practical vulnerability analysis. I enjoy breaking down how modern web apps fail and turning that knowledge into clear, defensible security work.</p>
+            <div class="hero-actions">
+              <a href="writeups.html" class="btn primary">View write-ups</a>
+              <a href="contact.html" class="btn ghost">Get in touch</a>
+              <a href="about.html" class="btn ghost">Learn more</a>
+            </div>
+          </div>
+
+          <div class="hero-photo-wrap">
+            <img
+              class="hero-photo"
+              src="8.jpg"
+              alt="Koech Kutto portrait"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            >
+            <div class="hero-photo placeholder" style="display:none; width:min(100%, 360px); aspect-ratio:4/5; border:1px solid var(--line); background:var(--panel-2);">
+              Add your image here
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Quick overview</h2>
+        </div>
+        <div class="stats">
+          <div class="stat" style="border-radius: 6px;">
+            <strong>3+</strong>
+            <span>Years learning security fundamentals</span>
+          </div>
+          <div class="stat" style="border-radius: 6px;">
+            <strong>10+</strong>
+            <span>Core security tools explored</span>
+          </div>
+          <div class="stat" style="border-radius: 6px;">
+            <strong>OWASP</strong>
+            <span>Top 10 in active study</span>
+          </div>
+          <div class="stat" style="border-radius: 6px;">
+            <strong>1</strong>
+            <span>Goal: build real-world impact</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2>About me</h2>
+        </div>
+        <div class="grid-2">
+          <div>
+            <p>I am building a career around web application security, starting from a foundation in Linux systems, scripting, networking, and how applications are built behind the scenes.</p>
+            <p>My interest lies in understanding web vulnerabilities from a practical standpoint: how inputs move through an application, where trust boundaries break, and how poor validation creates exploitable paths. I prefer focused manual testing and evidence-backed findings over shallow automation.</p>
+          </div>
+          <div class="card">
+            <div class="eyebrow">WHAT I AM LEARNING</div>
+            <ul class="checklist">
+              <li>OWASP Top 10 and attack paths</li>
+              <li>SQL injection and authentication bypass</li>
+              <li>Broken access control and IDOR</li>
+              <li>Python automation for recon and testing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2>Skills & tools</h2>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-column">
+            <div class="skill-group card">
+              <h3>Reconnaissance</h3>
+              <div class="chips">
+                <span class="chip">Nmap</span>
+                <span class="chip">Wireshark</span>
+                <span class="chip">Wappalyzer</span>
+                <span class="chip">DNS tools</span>
+              </div>
+            </div>
+            <div class="skill-group card">
+              <h3>Web testing</h3>
+              <div class="chips">
+                <span class="chip">Burp Suite</span>
+                <span class="chip">OWASP ZAP</span>
+                <span class="chip">Postman</span>
+                <span class="chip">HTTP basics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-column">
+            <div class="skill-group card">
+              <h3>Exploitation</h3>
+              <div class="chips">
+                <span class="chip">Manual SQLi</span>
+                <span class="chip">XSS</span>
+                <span class="chip">IDOR</span>
+                <span class="chip">SQLmap</span>
+              </div>
+              <p>I study exploitation as a practical process: identifying the vulnerable path, validating impact in a lab, and linking the result to clear remediation and reporting.</p>
+            </div>
+            <div class="skill-group card">
+              <h3>Languages</h3>
+              <div class="chips">
+                <span class="chip">Python</span>
+                <span class="chip">Bash</span>
+                <span class="chip">SQL</span>
+                <span class="chip">HTML/CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2>Projects</h2>
+        </div>
+        <div class="grid-3">
+          <article class="project-card">
+            <div class="eyebrow">Linux lab setup</div>
+            <h3>Security environment</h3>
+            <div class="meta-row">
+              <span class="tag">Linux</span>
+              <span class="tag">Burp</span>
+              <span class="tag">Python</span>
+            </div>
+            <p>I built a reusable environment for practical testing, recon, and validation with structured lab workflows.</p>
+          </article>
+          <article class="project-card">
+            <div class="eyebrow">Automation</div>
+            <h3>Recon helper</h3>
+            <div class="meta-row">
+              <span class="tag">Python</span>
+              <span class="tag">HTTP</span>
+              <span class="tag">Nmap</span>
+            </div>
+            <p>I am developing a small script to gather target metadata and support a cleaner, faster reconnaissance process.</p>
+          </article>
+          <article class="project-card">
+            <div class="eyebrow">Vulnerability lab</div>
+            <h3>Hands-on practice</h3>
+            <div class="meta-row">
+              <span class="tag">OWASP</span>
+              <span class="tag">XSS</span>
+              <span class="tag">SQLi</span>
+            </div>
+            <p>I focus on lab-based testing to sharpen my understanding of exploitation and proper reporting.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="findings">
+        <div class="section-head">
+          <span class="section-num">05</span>
+          <h2>Write-ups</h2>
+        </div>
+        <div class="grid-3">
+          <article class="writeup">
+            <div class="eyebrow">WA-001</div>
+            <h3>SQL injection to authentication bypass</h3>
+            <div class="meta-row">
+              <span class="tag">SQLi</span>
+              <span class="tag">Burp</span>
+            </div>
+            <p>I document my lab testing process, the vulnerability flow, its impact, and possible remediation.</p>
+            <span class="severity high">HIGH</span>
+          </article>
+          <article class="writeup">
+            <div class="eyebrow">WA-002</div>
+            <h3>IDOR in restricted endpoints</h3>
+            <div class="meta-row">
+              <span class="tag">IDOR</span>
+              <span class="tag">API</span>
+            </div>
+            <p>I record how I verified improper object-level authorization in a lab and how I would explain it clearly in a report.</p>
+            <span class="severity med">MEDIUM</span>
+          </article>
+          <article class="writeup">
+            <div class="eyebrow">WA-003</div>
+            <h3>Reflected XSS via input handling</h3>
+            <div class="meta-row">
+              <span class="tag">XSS</span>
+              <span class="tag">Manual</span>
+            </div>
+            <p>I explain how I validated reflected input in a lab and considered its impact on application trust boundaries.</p>
+            <span class="severity info">INFO</span>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">06</span>
+          <h2>Certifications & training</h2>
+        </div>
+        <div class="grid-2">
+          <div class="cert">
+            <div class="cert-name">Burp Suite Certified Practitioner</div>
+            <span class="cert-status">In progress</span>
+          </div>
+          <div class="cert">
+            <div class="cert-name">eWPT — Web Penetration Tester</div>
+            <span class="cert-status">Planned</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-head">
+          <span class="section-num">07</span>
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="label">Email</div>
+            <a href="mailto:kutttonhem@gmail.com">kutttonhem@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <div class="label">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/koech-kutto-40b644387" target="_blank" rel="noreferrer">linkedin.com/in/koech-kutto-40b644387</a>
+          </div>
+          <div class="contact-card">
+            <div class="label">GitHub</div>
+            <a href="https://github.com/kutto-codes" target="_blank" rel="noreferrer">github.com/kutto-codes</a>
+          </div>
+          <div class="contact-card">
+            <div class="label">Location</div>
+            <span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Eldoret%2C+Kenya" target="_blank" rel="noreferrer">Eldoret</a>, Kenya
+            </span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="container">
+    Built with intent, not a template. Last updated: September 2026.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
